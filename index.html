@@ -245,18 +245,23 @@
 
     <footer>
       <span>HabitGrid v1.2 &nbsp;|&nbsp; Data synced <span id="synced">2 minutes ago</span></span>
-      <span>Today: Jul 3, 2026</span>
+      <span id="date"></span>
     </footer>
   </div>
 
 <script>
+  
 (function () {
   "use strict";
+  const date = document.getElementById("date")
+  const d = new Date()
+  date.textContent = `Today: Jul ${d.getDate()}, 2026`
+  console.log(d.getDate())
 
   // ---- Model ----------------------------------------------------------------
   var tasks = ["Pray","Code","Teeth","E-talk","Train","Quran","Read","E-read","Jump","Shower"];
   var DAYS = 31;
-  var TODAY = 3; // day currently highlighted
+  var TODAY = d.getDate(); // day currently highlighted
 
   // status[t][d] : 1 = completed, 0 = missed, null = untracked
   // First three days seeded to reproduce the reference pattern.
@@ -454,6 +459,7 @@
   // ---- init -----------------------------------------------------------------
   buildGrid();
   renderChart();
+  
 })();
 </script>
 </body>

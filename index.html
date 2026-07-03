@@ -218,12 +218,12 @@
         HabitGrid
       </div>
       <div class="month">
-        Personal Habits &ndash; October 2024
+        Personal Habits &ndash; July 2026
         <span class="caret">&#9660;</span>
       </div>
       <div class="spacer"></div>
-      <button class="btn-primary" id="newTask">New Task</button>
-      <div class="avatar">A</div>
+      <button class="btn-primary" id="newTask" disabled>New Task</button>
+      <div class="avatar">ALI</div>
       <div class="gear" title="Settings">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
       </div>
@@ -245,7 +245,7 @@
 
     <footer>
       <span>HabitGrid v1.2 &nbsp;|&nbsp; Data synced <span id="synced">2 minutes ago</span></span>
-      <span>Today: Oct 3, 2024</span>
+      <span>Today: Jul 3, 2026</span>
     </footer>
   </div>
 
@@ -263,16 +263,16 @@
   // Column sums are 4, 5, 7 -> chart starts at 4, 5, 7 (the rising trend).
   var seed = {
     //          d1 d2 d3
-    Pray:   [1, 1, 1],
-    Code:   [0, 0, 1],
-    Teeth:  [1, 1, 1],
-    "E-talk":[0, 1, 0],
-    Train:  [0, 0, 1],
-    Quran:  [1, 0, 0],
-    Read:   [0, 0, 1],
-    "E-read":[0, 1, 0],
-    Jump:   [0, 0, 1],
-    Shower: [1, 1, 1]
+    Pray:   [null, null, null],
+    Code:   [null, null, null],
+    Teeth:  [null, null, null],
+    "E-talk":[null, null, null],
+    Train:  [null, null, null],
+    Quran:  [null, null, null],
+    Read:   [null, null, null],
+    "E-read":[null, null, null],
+    Jump:   [null, null, null],
+    Shower: [null, null, null]
   };
 
   // Plausible future trend for days 4..31 (used until a day is tracked in the grid).
